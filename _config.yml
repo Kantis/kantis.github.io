@@ -23,7 +23,7 @@ timezone:
 
 title: Emil Kantis                          # the main title
 
-tagline: Freelance coder since 2019   # it will display as the sub-title
+tagline: Freelance Kotlineer since 2019   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A Blog about software in general, and Kotlin in particular
@@ -78,7 +78,7 @@ google_analytics:
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: /assets/profile%20sq.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
@@ -105,7 +105,7 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled:      # boolean, keep empty means false
+    enabled: false      # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env:          # [development|production]
@@ -183,7 +183,9 @@ exclude:
   - package*.json
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: 
+   # - categories
+   - tags
   layouts:
     category: category
     tag: tag
