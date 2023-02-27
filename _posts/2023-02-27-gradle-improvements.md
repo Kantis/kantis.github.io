@@ -18,6 +18,14 @@ dependencies {
 }
 ```
 
+In case we're also applying the Spring Boot plugin, we can get the coordinates for the BOM using a provided property:
+
+```kotlin
+dependencies {
+  implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+}
+```
+
 
 ### Issue 2: Spring configured Kotlin 1.7 by default
 According to Sebastien Deleuze, Spring should already be Kotlin 1.8 compatible. Lets configure it instead!
@@ -42,48 +50,46 @@ If you need to use authenticated repositories, read up on credential handling [h
 ## Improved build file
 
 ```kotlin
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
-springBootVersion = "3.0.3"
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 plugins {
-  id("org.springframework.boot") version springBootVersion
-  kotlin("jvm") version "1.8.10"
-  kotlin("plugin.spring") version "1.8.10"
+    id("org.springframework.boot") version "3.0.3"
+    kotlin("jvm") version "1.8.10"
+    kotlin("plugin.spring") version "1.8.10"
 }
 
 
 repositories {
-  mavenCentral()
+    mavenCentral()
 }
 
 
 dependencies {
-  implementation(platform("org.springframework.boot:spring-boot-dependencies:$springBootVersion"))
-  implementation("org.springframework.boot:spring-boot-starter")
-  implementation("org.jetbrains.kotlin:kotlin-reflect")
-  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-  testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation(platform(SpringBootPlugin.BOM_COORDINATES))
+    implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 
 kotlin {
-   target {
-      compilations.configureEach {
-         compilerOptions.configure {
-            freeCompilerArgs.add("-Xjsr305=strict")
-         }
-      }
-   }
+    target {
+        compilations.configureEach {
+            compilerOptions.configure {
+                freeCompilerArgs.add("-Xjsr305=strict")
+            }
+        }
+    }
 
-   jvmToolchain {
-      languageVersion.set(JavaLanguageVersion.of("17"))
-   }
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of("17"))
+    }
 }
 
 
 tasks.withType<Test>().configureEach {
-  useJUnitPlatform()
+    useJUnitPlatform()
 }
 ```
 
