@@ -43,6 +43,8 @@ which added `"bar"` instead of our change which just added the comma.
 We also make our changes slightly easier to review. Given that there's no cost involved in having the trailing comma,
 it's feels like a no-brainer to add it.
 
+Oh.. and we also make it easier to re-arrange items in the list!
+
 
 ## Enforce trailing commas
 
