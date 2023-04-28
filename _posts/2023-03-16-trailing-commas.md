@@ -36,12 +36,12 @@ listOf(
 
 
 ### Why does this matter?
-By keeping the versioning history clean, we make it easier for whoever comes digging in our code next time.
-They'll immediately see the _actual_ reason for `"bar"` being there, since `blame` will identify the commit
-which added `"bar"` instead of our change which just added the comma.
+By keeping the versioning history clean, we make it easier for whoever comes digging into our code next time.
+They'll immediately see the _actual_ reason for `"bar"` being there since `blame` will identify the commit
+which added `"bar"` instead of our change that just added the comma.
 
 We also make our changes slightly easier to review. Given that there's no cost involved in having the trailing comma,
-it's feels like a no-brainer to add it.
+it feels like a no-brainer to add it.
 
 Oh.. and we also make it easier to re-arrange items in the list!
 

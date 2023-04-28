@@ -6,11 +6,11 @@ tags: [Kotlin, Gradle, Spring]
 ---
 
 ## Issues
-[Last article](./2023-02-26-gradle.md) we broke down the components of the [Spring Initializr](https://start.spring.io) Gradle build. I posted the article to the Kotlin language slack for feedback and Björn Kautler suggested a few improvements we could make.
+In the [previous article](./2023-02-26-gradle.md), we broke down the components of the [Spring Initializr](https://start.spring.io) Gradle build. I posted the article to the Kotlin language slack for feedback and Björn Kautler suggested a few improvements we could make.
 
 ### Issue 1: Spring dependency management plugin
 
-The plugin filled a niche back in the days when Gradle didn't have support for importing BOMs. Now we can simply import the Spring Boot BOM instead of using the plugin. 
+The plugin filled a niche back in the days when Gradle didn't have support for importing BOMs. Now we can simply import the Spring Boot BOM instead of using the plugin.
 
 ```kotlin
 dependencies {
@@ -28,7 +28,7 @@ dependencies {
 
 
 ### Issue 2: Spring configured Kotlin 1.7 by default
-According to Sebastien Deleuze, Spring should already be Kotlin 1.8 compatible. Lets configure it instead!
+According to Sebastien Deleuze, Spring should already be Kotlin 1.8 compatible. Let's configure it instead!
 
 ```kotlin
 plugins {
@@ -41,7 +41,7 @@ plugins {
 This has the added benefit of letting us use improved toolchain support for configuring JVM targets.
 
 ### Issue 3: `freeCompilerArgs` overrides previously set args
-It's not a problem in the generated starter, but if we had something else in our build adding `freeCompilerArgs` to the Kotlin compiler, these would be lost when we do `freeCompilerArgs = listOf("-Xjsr305=strict")`. We can just add to the list instead by using the `+=` operator. 
+It's not a problem in the generated starter, but if we had something else in our build adding `freeCompilerArgs` to the Kotlin compiler, these would be lost when we do `freeCompilerArgs = listOf("-Xjsr305=strict")`. We can just add to the list instead by using the `+=` operator.
 
 ### Issue 4: The credentials example would expose secrets in build logs
 If you need to use authenticated repositories, read up on credential handling [here](https://docs.gradle.org/current/userguide/dependency_management.html#sec:handling_credentials)
