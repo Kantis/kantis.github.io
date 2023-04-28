@@ -10,7 +10,7 @@ When I got to work today, my colleague informed me that he couldn't build the `m
 I checked Github and sure enough, the integration tests on `master` were broken there as well.
 It made little sense since we have branch protections in place - it shouldn't be possible to merge a PR where builds are failing.
 
-We were quickly able to conclude which PR had brought in the bad changes based on what failed.
+We were quickly able to conclude which PR had brought in the bad changes based on what failed. Checking the logs revelead that integration tests had simply not run for the PR, even though the `./gradlew check` task was run.
 
 > Task :app:integrationTest FROM-CACHE
 
