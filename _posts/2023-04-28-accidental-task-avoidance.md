@@ -14,7 +14,7 @@ We were quickly able to conclude which PR had brought in the bad changes based o
 
 > Task :app:integrationTest FROM-CACHE
 
-![surprised pikachu](/assets/pikachu.webp)
+![Jackie Chan making a confused expression](/assets/what.jpeg)
 {: .w-50 }
 
 Okay... Why does Gradle think our integration tests are up-to-date?
