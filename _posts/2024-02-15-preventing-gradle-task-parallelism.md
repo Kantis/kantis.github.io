@@ -34,7 +34,7 @@ tasks.named { it == "integrationTest" }.configureEach {
 }
 ```
 
-Now it can be added in the modules using the broker by simply adding ```
+Now it can be added in the modules using the broker by simply adding 
 ```kotlin
 plugins {
    // other plugins
