@@ -1,8 +1,9 @@
 ---
-title: A lesson in Idempotency
+title: A lesson in idempotency
 author: Kantis
 date: 2023-05-24
-tags: [Postmortem]
+tags:
+  - Postmortem
 ---
 
 Today a client reached out. They use software which I've built to manage invoicing between companies in their group. Problem was that some intra-group invoices had been handled but no invoices had been sent to their customer. 
