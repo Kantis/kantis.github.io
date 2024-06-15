@@ -22,9 +22,9 @@ Doing so dropped my execution time from 2.2s to 600ms when running a single spec
 When testing on JVM, Kotest uses ClassGraph to scan for Specs, Kotest configuration, @AutoScan annotations, etc. Disabling these things can have a positive impact on startup time.
 ## Using Kotest run configurations
 The above example only works when tests are executed using Gradle. In some cases, Kotest runs using a Kotest run configuration instead. To apply the same there, you can modify the Kotest run configuration template
-![[Pasted image 20240615114612.png]]
+![[2024-06-15-config-templates.png]]
 
-![[Pasted image 20240615114731.png]]
+![[2024-06-15-vm-options.png]]
 
 Add these VM options:
 ```
