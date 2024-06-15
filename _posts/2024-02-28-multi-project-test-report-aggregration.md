@@ -3,7 +3,7 @@ tags:
   - Gradle
 date: 2024-02-28
 author: Kantis
-title: Preventing parallelism of certain tasks in Gradle builds
+title: Multi-project test report aggregation
 ---
 ## Context
 We have a multi-project build using multiple jvm test suites (unit tests and integration tests). I want to aggregate the test reports of all these projects, irrespective of test type, into a single report. Googling the issue seemed to yield no results, other than an inconclusive thread.
