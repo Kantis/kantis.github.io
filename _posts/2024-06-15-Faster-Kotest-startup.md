@@ -13,7 +13,7 @@ tasks.withType<Test>().configureEach {
    useJUnitPlatform()
    // [...  maybe other config]
     
-   systemProperty("kotest.framework.discovery.jar.scan.disabled", "true")    
+   systemProperty("kotest.framework.discovery.jar.scan.disable", "true")    
    systemProperty("kotest.framework.classpath.scanning.config.disable", "true")  
    systemProperty("kotest.framework.classpath.scanning.autoscan.disable", "true")  
 }
