@@ -6,7 +6,7 @@ tags: [Kotlin, Gradle, Spring]
 ---
 
 ## Issues
-In the [previous article](./2023-02-26-gradle.md), we broke down the components of the [Spring Initializr](https://start.spring.io) Gradle build. I posted the article to the Kotlin language slack for feedback and Björn Kautler suggested a few improvements we could make.
+In the [previous article]({% post_url 2023-02-26-gradle %}), we broke down the components of the [Spring Initializr](https://start.spring.io) Gradle build. I posted the article to the Kotlin language slack for feedback and Björn Kautler suggested a few improvements we could make.
 
 ### Issue 1: Spring dependency management plugin
 
