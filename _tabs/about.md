@@ -5,10 +5,15 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm 35 years old. Living in Stockholm, Sweden. 🇸🇪 
+I'm a 38 years old geek, living in Stockholm, Sweden. 🇸🇪 
 
-Currently on an assignment where I get to work with Kotlin and loving it. Using Spring, Kotest, and Gradle as daily drivers. 
+I have worked as a software engineer the past 15 years, with a mix of technologies. Initially C# and Java, mixed with web technologies. Lately more niched on Kotlin backend development. 
 
-Interested in functional programming and category theory. Would love to work more with Ktor and Arrow.
+I am a freelancer, and I'm currently on an assignment for ATG (Aktiebolaget Trav och Galopp) where I've worked on systems for handling horse betting integrations, Casino and Sports betting. Using Kotlin, Spring, and Gradle as daily drivers and loving it. 
 
-Available on the [Kotlin slack](https://kotlin-lang.slack.com). @Kantis@fosstodon.org for Mastodon.
+Interested in functional programming, and would love to work more with Ktor and Arrow. 
+
+Available on:
+- [Kotlin slack](https://kotlin-lang.slack.com). 
+- Mastodon: [@Kantis@fosstodon.org](https://fosstodon.org/@Kantis)
+- Email: emil@codeboss.se
